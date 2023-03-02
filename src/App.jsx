@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <>
-      <color args={['#fff']} attach='background' />
+      {/* <color args={['#fff']} attach='background' /> */}
 
 
       <Environment preset="city" />
@@ -77,11 +77,53 @@ export default function App() {
             </Text3D>
             
             <group 
-              onClick={() => setCamera({x: -2, y: -1, z: (window.innerWidth < 600 ? 27 : 6)})} 
+              onClick={() => setCamera({x: -3, y: -1, z: (window.innerWidth < 600 ? 27 : 6)})} 
               onPointerMissed={() => setCamera({x: 0, y: 0, z: (window.innerWidth < 600 ? 27 : 10)})}
             >
               <AgentCard 
                 position={(window.innerWidth < 600 ? [3.5, -5, 0] : [0, -3, 0])} 
+                scale={(window.innerWidth < 600 ? 3 : 1)}
+                imgSrc='./profilepic.png'
+                name='Jack Youk'
+                title='Javascript Wizard'
+                bio='Web developer and tech founder with valuable insight on the technical side of startups.'
+              />
+            </group>
+
+            <group 
+              onClick={() => setCamera({x: 0, y: -1, z: (window.innerWidth < 600 ? 27 : 6)})} 
+              onPointerMissed={() => setCamera({x: 0, y: 0, z: (window.innerWidth < 600 ? 27 : 10)})}
+            >
+              <AgentCard 
+                position={(window.innerWidth < 600 ? [3.5, -5, 0] : [3, -3, 0])} 
+                scale={(window.innerWidth < 600 ? 3 : 1)}
+                imgSrc='./profilepic.png'
+                name='Jack Youk'
+                title='Javascript Wizard'
+                bio='Web developer and tech founder with valuable insight on the technical side of startups.'
+              />
+            </group>
+
+            <group 
+              onClick={() => setCamera({x: 3, y: -1, z: (window.innerWidth < 600 ? 27 : 6)})} 
+              onPointerMissed={() => setCamera({x: 0, y: 0, z: (window.innerWidth < 600 ? 27 : 10)})}
+            >
+              <AgentCard 
+                position={(window.innerWidth < 600 ? [3.5, -5, 0] : [6, -3, 0])} 
+                scale={(window.innerWidth < 600 ? 3 : 1)}
+                imgSrc='./profilepic.png'
+                name='Jack Youk'
+                title='Javascript Wizard'
+                bio='Web developer and tech founder with valuable insight on the technical side of startups.'
+              />
+            </group>
+
+            <group 
+              onClick={() => setCamera({x: 6, y: -1, z: (window.innerWidth < 600 ? 27 : 6)})} 
+              onPointerMissed={() => setCamera({x: 0, y: 0, z: (window.innerWidth < 600 ? 27 : 10)})}
+            >
+              <AgentCard 
+                position={(window.innerWidth < 600 ? [3.5, -5, 0] : [9, -3, 0])} 
                 scale={(window.innerWidth < 600 ? 3 : 1)}
                 imgSrc='./profilepic.png'
                 name='Jack Youk'

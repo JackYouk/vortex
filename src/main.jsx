@@ -8,12 +8,15 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
     <nav>
-      <a className='logo'>
+      <div className='logo' onClick={() => window.location = '/'}>
         <img src='./logo.png' alt='vortex logo' />
-      </a>
-      {/* <a className='navitem'>
-        <img src='./logo.png' alt='vortex logo' />
-      </a> */}
+      </div>
+    {/* <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul> */}
     </nav>
     <Canvas
       camera={{
@@ -27,6 +30,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <App />
       </Suspense>
     </Canvas>
-    <Loader containerStyles={{backgroundColor: 'black'}} />
+    <Loader containerStyles={{ backgroundColor: 'black' }} />
   </>,
 )
